@@ -1,9 +1,7 @@
-
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "spree/frontend/products";
-@import "font-awesome-sprockets";
-@import "font-awesome";
+
 
 
 @media (min-width: 768px) {
@@ -67,7 +65,7 @@ h1,h2,h3,h4,h5,h6 {
   color: #fff;
   display: inline-block;
   font-family: helvetica, arial, sans;
-  font-size: 1.7em;
+  font-size: 1.2em;
   font-weight: bold;
   height: 1.5em;
   line-height: 1;

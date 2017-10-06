@@ -9,7 +9,6 @@ Bundler.require(*Rails.groups)
 module TamarindoStore
   class Application < Rails::Application
     config.assets.initialize_on_precompile = false
-    
     config.to_prepare do
       # Load application's model / class decorators
       Dir.glob(File.join(File.dirname(__FILE__), "../app/**/*_decorator*.rb")) do |c|

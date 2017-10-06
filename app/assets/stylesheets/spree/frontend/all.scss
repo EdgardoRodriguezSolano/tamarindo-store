@@ -1,0 +1,77 @@
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "spree/frontend/products";
+
+
+@media (min-width: 768px) {
+  .navbar-nav {
+    width: 100%;
+    text-align: center;
+  }
+  .navbar-nav > li {
+    float: none;
+    display: inline-block;
+  }
+  .navbar-nav > li.navbar-right {
+    float: right !important;
+  }
+}
+
+
+/* GLOBAL STYLES */
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Open Sans', helvetica, arial, sans;
+  min-height: 100vh;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Open Sans', helvetica, arial, sans;
+  font-weight: 100;
+  font-size: 1.5em
+}
+
+/* HEADER STYLES*/
+
+.corner-title{
+  font-family: 'Raleway', helvetica, sans;
+  font-weight: 100;
+  font-size: 1em;
+  line-height: 8vh;
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+/* NAV STYLES*/
+.menu-title{
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-weight: 100;
+  font-size: 1.5em
+}
+
+
+
+/* SOCIAL LINKS */
+
+.social-link {
+  background: rgba(150,150,150,0.5);
+  border-radius: 99px;
+  box-sizing: border-box;
+  color: #fff;
+  display: inline-block;
+  font-family: helvetica, arial, sans;
+  font-size: 1.7em;
+  font-weight: bold;
+  height: 1.5em;
+  line-height: 1;
+  padding-top: 0.25em;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  width: 1.5em;
+}

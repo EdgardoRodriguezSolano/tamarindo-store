@@ -33,6 +33,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-sass'
 gem 'solidus'
 gem 'solidus_auth_devise'
+gem 'font-awesome-less'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

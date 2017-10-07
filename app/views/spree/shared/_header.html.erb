@@ -1,23 +1,68 @@
 
 
-<nav class="navbar navbar-default navbar-static-top ">
+<!--  Fixed header bar -->
+
+<div id="fixed-header">
+  <div class="container">
+    <div class="row header-container">
+      <div class="col-md-12" data-hook"nav_left_part">
+
+
+
+        <!--  Main navigation bar full width -->
+        <div class="wide-nav nav-bar-center">
+          <div class="row">
+
+        <div class="wrapper-logo col-md-1">
+          <figure id="logo" data-hook><%= logo img_options: {class: 'img-responsive', width: '80'}%>
+          </figure>
+        </div>
+
+            <div class="col-md-4" data-hook"nav_center_part"> 
+
+              <ul class="nav navbar-nav fixed-nav-center">
+                <% @taxonomies.each do |taxonomy| %>
+                <li class="dropdown fixed-menu-title">
+                  <%= link_to '#', data: { toggle: "dropdown"}, "aria-haspopup" => 'true' do %>
+                  <%= taxonomy.name.upcase%> <span class = 'caret'> </span>
+                  <% end %>
+                  <%= nav_tree(taxonomy.root, @taxon, 1) %>   
+                </li>
+                <% end %>
+              </ul>   
+            </div>
+
+            <div class="col-md-4" data-hook"nav_right_part"> 
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default navbar-static-top nav-color">
   
 <div class="container">
   <div class="header-wrapper">
     <!--  Top bar -->
     <div class="top-bar container-fluid">
       <div class="row">
+
           <div class="col-md-12">
+
             <div class="col-md-2 corner-title ">
               PONTE BACANO...
             </div>
 
            <div class="col-md-2">
             <div class="social-icons">
-                <a href="https://www.facebook.com/" class="social-link">
+                <a href="https://www.facebook.com/tamarindocol/" class="social-link">
                   <i class="fa fa-facebook"></i>
                 </a>
-                <a href="https://www.instagram.com" class="social-link">
+                <a href="https://www.instagram.com/tamarindocol/" class="social-link">
                   <i class="fa fa-instagram"></i>
                 </a>
             </div>
@@ -36,7 +81,6 @@
 
 
       <div class="col-md-4 text-center" data-hook"header_center_part">
-          <!-- Brand and toggle get grouped for better mobile display -->
             <figure id="logo" data-hook><%= logo img_options: {class: 'img-responsive center-block', width: '100'}%>
           </figure>
 
@@ -73,7 +117,15 @@
     </div>
 
 
+
+
   </div>
 </div>
+
+
 </nav>
+
+
+
+
 

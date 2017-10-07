@@ -23,6 +23,7 @@
 
 
 body {
+
   display: flex;
   flex-direction: column;
   font-family: 'Open Sans', helvetica, arial, sans;
@@ -46,12 +47,40 @@ h1,h2,h3,h4,h5,h6 {
   vertical-align: middle;
 }
 
+#fixed-header{
+  background-color: #fff;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  display:none;
+  position: fixed;
+  width: 100%;
+  z-index: 20;
+
+}
+
 
 /* NAV STYLES*/
 .menu-title{
   font-family: 'Yanone Kaffeesatz', sans-serif;
   font-weight: 100;
   font-size: 1.5em
+}
+
+.fixed-menu-title{
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-weight: 100;
+  font-size: 2em
+}
+
+.nav-color
+{
+    background: #fff;
+}
+
+.fixed-nav-center
+{
+  line-height: 24vh;
+  text-align: center;
 }
 
 
@@ -75,3 +104,6 @@ h1,h2,h3,h4,h5,h6 {
   vertical-align: middle;
   width: 1.5em;
 }
+
+
+

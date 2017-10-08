@@ -14,7 +14,7 @@
           <div class="row">
 
             <div class="wrapper-logo col-md-1">
-              <figure id="logo" data-hook><%= logo img_options: {class: 'img-responsive', width: '80'}%>
+              <figure id="ir" data-hook><%= logo img_options: {class: 'img-responsive', width: '80'}%>
               </figure>
             </div>
 
@@ -43,65 +43,80 @@
 </div>
 
 
-<nav class="navbar navbar-default navbar-static-top nav-color">
 
-  <div class="container">
-    <div class="header-wrapper">
-      <!--  Top bar -->
-      <div class="top-bar">
-        <div class="row">
+<div class="header-wrapper">
+  <!--  Top bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
 
-          <div class="col-md-12">
+          <div class="col-md-2">
+            <span class="corner-title">
+             PONTE BACANO...
+           </span>
+         </div>
 
-            <div class="col-md-2">
-              <span class="corner-title">
-               PONTE BACANO...
-             </span>
-           </div>
-
-           <div class="col-md-2">
-            <div class="social-icons corner-title throw-left">
-              <a href="https://www.facebook.com/tamarindocol/" class="social-link">
-                <i class="fa fa-facebook"></i>
-              </a>
-              <a href="https://www.instagram.com/tamarindocol/" class="social-link">
-                <i class="fa fa-instagram"></i>
-              </a>
-            </div>
+         <div class="col-md-2">
+          <div class="social-icons corner-title throw-left">
+            <a href="https://www.facebook.com/tamarindocol/" class="social-link">
+              <i class="fa fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/tamarindocol/" class="social-link">
+              <i class="fa fa-instagram"></i>
+            </a>
           </div>
         </div>
       </div>
     </div>
+  </div>
+</div>
 
 
 
-    <!--  Master header -->
-
-    <div class= "row">
-         <div class="container">
-        
-        <div class="col-md-4" data-hook"header_left_part">
-        </div>
+<!--  Master header -->
+<div class="sticky-wrapper">
+ <div class="container">
+  <div class= "row">
 
 
-        <div class="col-md-4" data-hook"header_center_part">
-          <div class = "logo">
-            <figure id="ir" data-hook><%= logo img_options: {class: 'img-responsive center-block', width: '100'}%>
-            </figure>
-        </div>
-        </div>
+    <div class="col-md-4" data-hook"header_left_part">
+      <div class="logo">
+      <%= render partial: 'spree/shared/search' %>
+    </div>
+    </div>
 
-        <div class="col-md-4" data-hook"header_right_part">
-        </div>
+
+    <div class="col-md-4" data-hook"header_center_part">
+      <div class = "logo">
+        <figure id="ir" data-hook><%= logo img_options: {class: 'img-responsive center-block', width: '100'}%>
+        </figure>
+      </div>
+    </div>
+
+    <div class="col-md-4" data-hook"header_right_part">
+      <div class="logo">
+        <%= link_to_cart %>
+          <i class="fa fa-shopping-cart cart-ico"></i> 
       </div>
 
+    </div>
+
+     
+
+  </div>
+
+</div>
+</div>
+
       <!--  Main navigation bar -->
-      <div class="wide-nav nav-bar-center nav-black">
+      <div class="wide-nav nav-bar-center">
+        <div class="container  nav-black">
         <div class="row">
           <div class="col-md-4" data-hook"nav_left_part">
           </div>
 
-          
+
           <div class="col-md-4" data-hook"nav_center_part"> 
 
             <ul class="nav navbar-nav">
@@ -121,15 +136,13 @@
 
         </div>
       </div>
-
-
     </div>
 
-  </div>
+
+
 </div>
 
 
-</nav>
 
 
 

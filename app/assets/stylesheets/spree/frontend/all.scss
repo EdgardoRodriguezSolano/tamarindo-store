@@ -38,6 +38,22 @@ h1,h2,h3,h4,h5,h6 {
 
 /* HEADER STYLES*/
 
+
+.cart-ico
+{
+  font-size: 1.5em;
+}
+
+.cart-info
+{ 
+  color: #000;
+  flex-grow: 1;
+  flex-basis: 0;
+  font-family: 'Open Sans', helvetica, arial, sans;
+  font-size: 1.5rem;
+  text-align: right;
+}
+
 .corner-title{
   font-family: 'Raleway', helvetica, sans;
   font-weight: 100;
@@ -47,12 +63,19 @@ h1,h2,h3,h4,h5,h6 {
   vertical-align: middle;
 }
 
+
 .logo
 {
   align-items: center;
   display: flex;
   height: 16rem;
+}
 
+.wrapper-logo
+{
+  align-items: center;
+  display: flex;
+  height: 10rem;
 }
 
 #ir
@@ -78,6 +101,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .top-bar
 {
+  border-bottom: solid 1px #c9c9c9;
   height: 4rem;
 }
 
@@ -86,15 +110,18 @@ h1,h2,h3,h4,h5,h6 {
 
 /* NAV STYLES*/
 .menu-title{
-  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 100;
   font-size: 1.5em
 }
 
+
+
+
 .fixed-menu-title{
-  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 100;
-  font-size: 2em
+  font-size: 1.8em
 }
 
 .nav-color
@@ -113,7 +140,33 @@ h1,h2,h3,h4,h5,h6 {
   text-align: center;
 }
 
+.btn
+{
+  background: #fff;
+  color: grey;
+}
 
+.search-field{
+  font-family: 'Open Sans', helvetica, arial, sans;
+  font-size: 1.5rem;
+  border: none;
+  border-bottom: solid 1px #c9c9c9;
+  padding: 5px;
+}
+
+
+input.search-field:focus {
+    outline:none;
+}
+
+
+.menu-title a{
+    color:#fff;
+  }
+
+.fixed-menu-title a{
+  color:#000;
+}
 
 /* SOCIAL LINKS */
 

@@ -1,0 +1,14 @@
+<div id="search-r">
+<% @taxons = @taxon && @taxon.parent ? @taxon.parent.children : Spree::Taxon.roots %>
+<%= form_tag spree.products_path, method: :get do %>
+
+  <button type="submit" class="btn">
+    <i class="fa fa-search fa-lg"></i> 
+  </button>
+
+  <input type="text" class = "search-field" name="keywords" id="keywords" placeholder="Busca aquí...">
+
+
+<% end %>
+</div>
+

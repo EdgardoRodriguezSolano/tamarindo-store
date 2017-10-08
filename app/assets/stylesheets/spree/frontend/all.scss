@@ -42,21 +42,46 @@ h1,h2,h3,h4,h5,h6 {
   font-family: 'Raleway', helvetica, sans;
   font-weight: 100;
   font-size: 1em;
-  line-height: 8vh;
+  line-height: 4rem;
   text-align: center;
   vertical-align: middle;
 }
 
+.logo
+{
+  align-items: center;
+  display: flex;
+  height: 16rem;
+
+}
+
+#ir
+{
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.throw-left{
+  text-align: left;
+}
+
 #fixed-header{
   background-color: #fff;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
   color: #fff;
   display:none;
+  height: 10rem;
   position: fixed;
   width: 100%;
   z-index: 20;
-
 }
+
+.top-bar
+{
+  height: 4rem;
+}
+
+
 
 
 /* NAV STYLES*/
@@ -77,9 +102,14 @@ h1,h2,h3,h4,h5,h6 {
     background: #fff;
 }
 
+.nav-black
+{
+    background: #000;
+}
+
 .fixed-nav-center
 {
-  line-height: 24vh;
+  line-height: 10rem;
   text-align: center;
 }
 

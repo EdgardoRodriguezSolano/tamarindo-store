@@ -36,6 +36,8 @@ h1,h2,h3,h4,h5,h6 {
   font-size: 1.5em
 }
 
+
+
 /* HEADER STYLES*/
 
 
@@ -63,6 +65,44 @@ h1,h2,h3,h4,h5,h6 {
   vertical-align: middle;
 }
 
+.cuenta
+{
+  font-family: 'Open Sans', helvetica, arial, sans;
+  font-weight: 100;
+  font-size: 1em;
+  line-height: 4rem;
+  text-align: right;
+  vertical-align: middle;
+}
+
+
+#menu li{
+  display:inline;
+}
+
+.menu-item a{
+  color: grey;
+}
+
+.menu-item-color a{
+}
+
+#fixed-header{
+  background-color: #fff;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+  color: #fff;
+  display:none;
+  height: 10rem;
+  position: fixed;
+  width: 100%;
+  z-index: 20;
+}
+
+#ir
+{
+  flex-grow: 1;
+  flex-basis: 0;
+}
 
 .logo
 {
@@ -78,26 +118,13 @@ h1,h2,h3,h4,h5,h6 {
   height: 10rem;
 }
 
-#ir
-{
-  flex-grow: 1;
-  flex-basis: 0;
-}
+
 
 .throw-left{
   text-align: left;
 }
 
-#fixed-header{
-  background-color: #fff;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
-  color: #fff;
-  display:none;
-  height: 10rem;
-  position: fixed;
-  width: 100%;
-  z-index: 20;
-}
+
 
 .top-bar
 {
@@ -109,20 +136,38 @@ h1,h2,h3,h4,h5,h6 {
 
 
 /* NAV STYLES*/
+.fixed-menu-title{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+  font-size: 1.8em
+}
+
+.fixed-menu-title a{
+  color:#000;
+}
+
+.fixed-nav-center
+{
+  line-height: 10rem;
+  text-align: center;
+}
+
+
+input.search-field:focus {
+    outline:none;
+}
+
+
+
 .menu-title{
   font-family: 'Raleway', sans-serif;
   font-weight: 100;
   font-size: 1.5em
 }
 
-
-
-
-.fixed-menu-title{
-  font-family: 'Raleway', sans-serif;
-  font-weight: 100;
-  font-size: 1.8em
-}
+.menu-title a{
+    color:#fff;
+  }
 
 .nav-color
 {
@@ -132,19 +177,9 @@ h1,h2,h3,h4,h5,h6 {
 .nav-black
 {
     background: #000;
+    height: 15vh;
 }
 
-.fixed-nav-center
-{
-  line-height: 10rem;
-  text-align: center;
-}
-
-.btn
-{
-  background: #fff;
-  color: grey;
-}
 
 .search-field{
   font-family: 'Open Sans', helvetica, arial, sans;
@@ -154,18 +189,9 @@ h1,h2,h3,h4,h5,h6 {
   padding: 5px;
 }
 
-
-input.search-field:focus {
-    outline:none;
-}
-
-
-.menu-title a{
-    color:#fff;
-  }
-
-.fixed-menu-title a{
-  color:#000;
+.vertical-center{
+  line-height: 15vh;
+  vertical-align:middle;
 }
 
 /* SOCIAL LINKS */
@@ -187,6 +213,16 @@ input.search-field:focus {
   vertical-align: middle;
   width: 1.5em;
 }
+
+
+/* BOOTSTRAP OVERRIDE */
+
+.btn
+{
+  background: #fff;
+  color: grey;
+}
+
 
 
 

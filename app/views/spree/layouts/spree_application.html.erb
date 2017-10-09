@@ -11,7 +11,9 @@
 
 
   <%= render partial: 'spree/shared/header' %>
-    
+  
+  <%= render partial: 'spree/shared/slideshow' %>
+
 	<div class="container">
       <div id="wrapper" class="row" data-hook>
 
@@ -25,14 +27,15 @@
         </div>
 
         <%= yield :templates %>
+     </div>
+ </div>
+ <!--    END MAIN CONTENT  -->
 
 
+  <!--     MAIN FOOTER    -->
+           <%= render partial: 'spree/shared/footer' %>
 
-      <!--     MAIN FOOTER    -->
-      </div>
-          <%= render partial: 'spree/shared/footer' %>
-      </div>
-      <!--   END MAIN FOOTER   -->
+  <!--   END MAIN FOOTER   -->
  
     <script src="https://code.jquery.com/jquery-latest.js"></script>
     <script type="text/javascript">

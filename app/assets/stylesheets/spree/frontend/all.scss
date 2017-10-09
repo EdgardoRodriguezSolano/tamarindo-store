@@ -23,7 +23,6 @@
 
 
 body {
-
   display: flex;
   flex-direction: column;
   font-family: 'Open Sans', helvetica, arial, sans;
@@ -224,5 +223,35 @@ input.search-field:focus {
 }
 
 
+/* FOOTER STYLE */
+
+.footer-wrapper
+{
+  background-color: #171717;
+  color: white;
+  height: 30rem;
+  width: 100%;
+}
+
+.contacto p
+{
+  font-family: 'Coming Soon', cursive;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+
+#footer-center h1{
+  font-family: 'Coming Soon', cursive;
+  font-size: 1.7rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.powered-by{
+  font-family: 'Open Sans', helvetica, arial, sans;
+  font-size: 1rem;
+  text-align: center;
+}
 
 

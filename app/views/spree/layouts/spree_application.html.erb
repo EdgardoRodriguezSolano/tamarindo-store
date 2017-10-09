@@ -12,14 +12,14 @@
 
   <%= render partial: 'spree/shared/header' %>
   
-  <%= render partial: 'spree/shared/slideshow' %>
+
 
 	<div class="container">
       <div id="wrapper" class="row" data-hook>
 
         <%= taxon_breadcrumbs(@taxon) %>
 
-  <!--      <%= render partial: 'spree/shared/sidebar' if content_for? :sidebar %> -->
+ 
 
         <div id="content" class="columns <%= !content_for?(:sidebar) ? "sixteen" : "twelve omega" %>" data-hook>
           <%= flash_messages %>

@@ -13,12 +13,12 @@
         <div class="wide-nav nav-bar-center">
           <div class="row">
 
-            <div class="wrapper-logo col-md-1">
+            <div class="wrapper-logo col-md-1 col-xs-2">
               <figure id="ir" data-hook><%= logo img_options: {class: 'img-responsive', width: '80'}%>
               </figure>
             </div>
 
-            <div class="col-md-4" data-hook"nav_center_part"> 
+            <div class="col-md-4 col-xs-10" data-hook"nav_center_part"> 
 
               <ul class="nav navbar-nav fixed-nav-center">
                 <% @taxonomies.each do |taxonomy| %>
@@ -51,13 +51,13 @@
       <div class="row">
         <div class="col-md-12">
 
-          <div class="col-md-2">
+          <div class="col-md-2 col-xs-6">
             <span class="corner-title">
              PONTE BACANO...
            </span>
          </div>
 
-         <div class="col-md-2">
+         <div class="col-md-2 col-xs-6">
           <div class="social-icons corner-title throw-left">
             <a href="https://www.facebook.com/tamarindocol/" class="social-link">
               <i class="fa fa-facebook"></i>
@@ -82,9 +82,9 @@
 
 
     <div class="col-md-4" data-hook"header_left_part">
-      <div class="logo">
-      <%= render partial: 'spree/shared/search' %>
-    </div>
+      <div class="logo search-wrapper">
+        <%= render partial: 'spree/shared/search' %>
+      </div>
     </div>
 
 
@@ -96,7 +96,7 @@
     </div>
 
     <div class="col-md-4" data-hook"header_right_part">
-      <div class="logo">
+      <div class="logo cart-wrapper">
         <%= link_to_cart %>
           <i class="fa fa-shopping-cart cart-ico"></i> 
       </div>

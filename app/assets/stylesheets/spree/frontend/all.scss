@@ -255,3 +255,46 @@ input.search-field:focus {
 }
 
 
+
+
+@media (max-width: 800px) {
+  html {
+  }
+
+  /* HEADER STYLES */
+.search-wrapper, .cart-wrapper{
+  display: none;
+}
+
+.top-bar
+{
+  border-bottom: solid 1px #c9c9c9;
+  height: 4rem;
+}
+
+#fixed-header{
+  display:none;
+  z-index: 0;
+}
+
+  /* NAV STYLES */
+.nav-black
+{
+    background: #000;
+    height: auto;
+}
+
+.dropdown-menu li>a {color:#fff; }
+.dropdown-menu >li {color:#fff;}
+.dropdown-menu li>a:hover {background:#fff;}
+
+
+
+
+.menu-title a:hover{
+  color:green;
+}
+
+  /* FOOTER STYLES */
+
+}

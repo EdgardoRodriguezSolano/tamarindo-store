@@ -41,12 +41,21 @@
     <script type="text/javascript">
       (function($) {          
         $(document).ready(function(){                    
-          $(window).scroll(function(){                          
-            if ($(this).scrollTop() > 220) {
-              $('#fixed-header').fadeIn(200);
-            } else {
-              $('#fixed-header').fadeOut(200);
-            }
+          $(window).scroll(function(){    
+
+          var mq = window.matchMedia( "(max-width: 800px)" );
+                  if (mq.matches) {
+                      // window width is at less than 800px
+                  }
+                  else {
+                      // window width is greater than 800px
+                              if ($(this).scrollTop() > 220) {
+                                $('#fixed-header').fadeIn(200);
+                              } else {
+                                $('#fixed-header').fadeOut(200);
+                              }
+                  }                      
+
           });
         });
       })(jQuery);

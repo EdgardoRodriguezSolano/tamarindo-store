@@ -37,6 +37,7 @@ h1,h2,h3,h4,h5,h6 {
 
 
 
+
 /* HEADER STYLES*/
 
 
@@ -221,6 +222,35 @@ input.search-field:focus {
   background: #fff;
   color: grey;
 }
+
+
+/* FEATURED PRODUCTS */
+
+.heading-title{
+  font-family: 'Raleway', helvetica, sans;
+  font-weight: 100;
+  font-size: 1.8em;
+  line-height: 4rem;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.bery-hr{
+  display: block;
+  height: 1px;
+  background: #ddd;
+  margin-top: 10px;
+}
+
+.bery-hr.medium{
+width: 150px;
+}
+
+.bery-hr.text-center{
+  margin: 0 auto;
+  text-align: center;
+}
+
 
 
 /* FOOTER STYLE */

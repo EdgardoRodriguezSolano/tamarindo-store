@@ -10,7 +10,7 @@
   <body class="<%= body_class %>" id="<%= @body_id || 'default' %>" data-hook="body">
 
 
-  <%= render partial: 'spree/shared/header' %>
+  <%= render partial: 'spree/shared/header', locals: { featured_string: @featured_string} %>
   
 
 

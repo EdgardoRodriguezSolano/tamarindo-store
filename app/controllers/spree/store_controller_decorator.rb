@@ -1,8 +1,9 @@
 class Spree::StoreController
   before_action :load_taxonomies, :load_featured
-  
+
   def load_taxonomies
       @taxonomies = Spree::Taxonomy.includes(root: :children)
+      @featured_string = "Destacados"
   end
   
 

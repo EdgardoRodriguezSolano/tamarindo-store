@@ -22,12 +22,13 @@
 
               <ul class="nav navbar-nav fixed-nav-center">
                 <% @taxonomies.each do |taxonomy| %>
-                <li class="dropdown fixed-menu-title">
-                  <%= link_to '#', data: { toggle: "dropdown"}, "aria-haspopup" => 'true' do %>
-                  <%= taxonomy.name.upcase%> <span class = 'caret'> </span>
-                  <% end %>
-                  <%= nav_tree(taxonomy.root, @taxon, 1) %>   
-                </li>
+                   <li class="dropdown fixed-menu-title">
+                      <%= link_to '#', data: { toggle: "dropdown"}, "aria-haspopup" => 'true' do %>
+                      <%= taxonomy.name.upcase%> <span class = 'caret'> </span>
+                      <% end %>
+                      <%= nav_tree(taxonomy.root, @taxon, 1) %>   
+                    </li>
+
                 <% end %>
               </ul>   
             </div>

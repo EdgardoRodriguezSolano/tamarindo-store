@@ -18,7 +18,7 @@ class Spree::StoreController
   end
 
   def load_featured
-    @featured_taxon = Spree::Taxon.find("31") 
+    @featured_taxon = Spree::Taxon.find_by_name(@featured_string) 
     taxon = @featured_taxon
     @featured_products = paginate(taxon.products.ransack(params[:q]).result)
     @featured_products = @featured_products.includes(master: :default_price)

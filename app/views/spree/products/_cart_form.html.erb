@@ -28,6 +28,9 @@
       <%= hidden_field_tag "variant_id", @product.master.id %>
     <% end %>
 
+<%= debug(@product.price_for(current_pricing_options)) if Rails.env.development? %>
+<%= debug( @product.master.id) if Rails.env.development? %>
+
     <% if @product.price_for(current_pricing_options) and !@product.price.nil? %>
       <div data-hook="product_price" class="columns five <%= !@product.has_variants? ? 'alpha' : 'omega' %>">
 
@@ -51,7 +54,9 @@
         <div class="add-to-cart form-group">
           <%= number_field_tag :quantity, 1, class: 'title form-control', min: 1 %>
           <%= button_tag class: 'large primary btn btn-success', id: 'add-to-cart-button', type: :submit do %>
+
             <%= Spree.t(:add_to_cart) %>
+
           <% end %>
         </div>
       </div>

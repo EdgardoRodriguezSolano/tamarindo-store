@@ -6,6 +6,10 @@ git_source(:github) do |repo_name|
 end
 
 ruby '2.4.1'
+# Image upload gems
+gem 'paperclip'
+gem 'fog-aws'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'

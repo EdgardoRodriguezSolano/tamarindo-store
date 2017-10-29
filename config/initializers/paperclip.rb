@@ -1,4 +1,4 @@
-if Rails.application.secrets.aws_access_key_id
+if ENV['S3_ACCESS_KEY']
   Paperclip::Attachment.default_options.merge!(
     storage: :fog,
     fog_credentials: {

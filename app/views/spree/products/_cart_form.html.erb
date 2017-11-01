@@ -1,4 +1,4 @@
-<%= form_for :order, url: populate_orders_path, html: {class: "form-inline"} do |f| %>
+<%= form_for :order, url: populate_orders_path, html: {class: "form-inline"} do |f| %> <!--Orders controller, edit action-->
   <div id="inside-product-cart-form" data-hook="inside_product_cart_form" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
 
     <% if @product.variants_and_option_values_for(current_pricing_options).any? %>
@@ -28,8 +28,6 @@
       <%= hidden_field_tag "variant_id", @product.master.id %>
     <% end %>
 
-<%= debug(@product.price_for(current_pricing_options)) if Rails.env.development? %>
-<%= debug( @product.master.id) if Rails.env.development? %>
 
     <% if @product.price_for(current_pricing_options) and !@product.price.nil? %>
       <div data-hook="product_price" class="columns five <%= !@product.has_variants? ? 'alpha' : 'omega' %>">

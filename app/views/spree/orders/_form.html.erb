@@ -1,0 +1,10 @@
+
+<%= render 'spree/shared/error_messages', target: order %>
+<table id="cart-detail" data-hook>
+
+  <tbody id="line_items" data-hook>
+    <%= render partial: 'spree/orders/line_item', collection: order.line_items, locals: { order_form: order_form } %>
+  </tbody>
+
+</table>
+

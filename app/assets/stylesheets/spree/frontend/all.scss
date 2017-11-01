@@ -1,8 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "spree/frontend/products";
-
-
+@import "spree/frontend/product";
 
 @media (min-width: 768px) {
   .navbar-nav {
@@ -16,6 +15,7 @@
   .navbar-nav > li.navbar-right {
     float: right !important;
   }
+
 }
 
 
@@ -29,7 +29,7 @@ body {
   min-height: 100vh;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h3,h4,h5,h6 {
   font-family: 'Open Sans', helvetica, arial, sans;
   font-weight: 100;
   font-size: 1.5em
@@ -176,7 +176,7 @@ input.search-field:focus {
 
 .nav-black
 {
-    background: #000;
+    background: #191919;
     height: 7rem;
 }
 
@@ -310,7 +310,7 @@ width: 150px;
   /* NAV STYLES */
 .nav-black
 {
-    background: #000;
+    background: #191919;
     height: auto;
 }
 
@@ -326,5 +326,12 @@ width: 150px;
 }
 
   /* FOOTER STYLES */
+
+
+  /* CHECKOUT */
+
+  .ch4_promoTextInput {
+  width: 50%;
+  } 
 
 }

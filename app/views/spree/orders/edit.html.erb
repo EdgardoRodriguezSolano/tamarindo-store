@@ -1,0 +1,104 @@
+<% @body_id = 'cart' %>
+<div data-hook="cart_container">
+
+  <% if @order.line_items.empty? %>
+
+    <div data-hook="empty_cart">
+      <p><%= Spree.t(:your_cart_is_empty) %></p>
+      <p><%= link_to Spree.t(:continue_shopping), products_path, class: 'button continue' %></p>
+    </div>
+
+  <% else %>
+  <div class = "container">
+    <div class = "row chrome">
+
+      <!-- Columna izquierda - artículos en carrito -->
+      <div id="ch_content" class = "col-md-6">
+          
+          <h2 class = "heading"><%= Spree.t(:shopping_cart) %></h2>
+          <div data-hook="outside_cart_form">
+            <%= form_for @order, url: update_cart_path, html: {id: 'update-cart'} do |order_form| %>
+            <!-- Order controller, edit action, order_form-->
+
+
+            <div class = "ch4_contentItems" data-hook="inside_cart_form">
+              <ul class = "bordered">
+              <div data-hook="cart_items">
+                <% order = order_form.object %>
+                <%= render 'form', order_form: order_form, order: order %>
+
+
+              </div>
+            </ul>
+
+
+
+            </div>
+
+          </div>
+      
+       </div>
+      <!-- FIN ch_content -->
+
+       <!-- Columna derecha - resumen del carrito -->
+      <div id="ch_summary" class = "col-md-6">
+        <div id="ch4_summaryContent">
+            
+            <div id="ch4_summaryTitle" class="ch4_summaryRowBegin uppercase "><%=Spree.t(:summary)%></div>
+
+            <div id="ch4_summaryPromo" class="ch4_summaryRow ch4_uppercase">
+                <span class="ch4_promoLabel js-toggleActive open" data-targetelement="#ch4_promoEnter">
+                 <%= Spree.t(:promo_code_q) %></span>
+                <a href="#" class="ch4_helpPromoCode" data-linkname="help promo code"><div id="ch4_toolTipPromo" class="ch4_toolTip" style="display: none; left: -220px;"><div class="ch4_toolTipArrow"></div>If you are having trouble, please check the Terms &amp; Conditions of the promotion, which are usually found by clicking "See Details" where the promotion was found online or in the footer of the email or mail.<br><br>Promo Codes cannot be used with customized products.</div></a>
+                      <div class="links columns sixteen alpha omega" data-hook="cart_buttons">
+                        <%= order_form.text_field :coupon_code, class:'ch4_promoTextInput', placeholder: Spree.t(:promo_code) %>
+                        <%= button_tag class: 'ch4_btn ch4_btnPromoApplySummary', id: 'update-button' do %>
+                        <%= Spree.t(:apply) %>
+                        <% end %>
+
+                      </div>
+            </div>
+
+
+            <div id="ch4_summarySubtotal" class="ch4_summaryRow uppercase">
+                    <%= Spree.t(:subtotal)%> <a href="#" class="ch4_helpBlk" data-linkname="help subtotal">
+                      <i class="fa fa-question-circle-o cart-icon" aria-hidden="true"></i>
+                      <div id="ch4_toolTipSubTotal" class="ch4_toolTip" style="display: none;">
+
+                        <div class="ch4_toolTipArrow"></div>
+
+                        The subtotal reflects the total price of your order before any applicable discounts. It does not include shipping costs and taxes.</div>
+                    </a>
+                    <span id="subTotalAmount" class="ch4_right"><%= order.display_total %></span>
+            </div>
+
+            <div id="ch4_summaryButtons" class="ch4_summaryRowEnd ">
+                <%= button_tag class: 'ch4_btn ch4_btnOrange ch4_btnDropShadowSummary ch4_btnSummaryCol', id: 'checkout-link', name: 'checkout' do %>
+                <%= Spree.t(:checkout) %>
+                <% end %>
+
+
+            </div>
+
+
+      </div>
+       <!-- FIN ch_summary -->
+
+          <% end %>   <!-- END for order_form -->
+
+    <div id="empty-cart" data-hook>
+      <%= form_tag empty_cart_path, method: :put do %>
+        <p id="clear_cart_link" data-hook>
+        <%= submit_tag Spree.t(:empty_cart), class: 'button gray' %>
+        <%= Spree.t(:or) %>
+        <%= link_to Spree.t(:continue_shopping), products_path, class: 'continue button gray' %>
+        </p>
+      <% end %>
+    </div>
+
+  </div>
+  </div>
+  <% end %>
+</div>
+
+

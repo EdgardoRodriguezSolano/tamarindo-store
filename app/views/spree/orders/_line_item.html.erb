@@ -38,7 +38,10 @@
           -->
           <div class="ch4_cartItemOption"><div class="ch4_cartItemLabel">Details:</div>
             <!-- price information and personalization display -->
-
+            
+            <!--
+            <%= item_form.number_field :quantity, min: 0, class: "line_item_quantity", size: 5 %>
+            -->
               <!-- Selector de cantidad de productos -->
                <div id = "ch4_miniPDP " class="style-select-wrapper">
                   <%= item_form.select(:quantity, {}, {:class => 'ch4_miniPDPBuyingTools quantity-dropdown mediumSelect select-blk', :name => 'qty' }) do %>

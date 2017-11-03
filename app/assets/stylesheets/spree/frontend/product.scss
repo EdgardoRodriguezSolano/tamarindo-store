@@ -317,7 +317,9 @@ body.PL #subTotalAmount, body.PL #totalAmt, body.PL .currency {
     border: none
 }
 
-
+.ch4_summaryRow, .ch4_summaryRowEnd {
+    border-top: #333 1px solid;
+}
 
 
 #ch4_cartTotal, #ch4_checkoutHeadingOpen, #ch4_confirmHeading,
@@ -357,6 +359,7 @@ body.PL #subTotalAmount, body.PL #totalAmt, body.PL .currency {
 .ch4_billingCountry {
     margin-bottom: 65px
 }
+
 
 
 .style-select-wrapper{width:17em;margin-top:0.9em}
@@ -456,3 +459,11 @@ border:1px solid #000
     width: 40%
 }
 
+
+
+
+#product-thumbnail.style-select-wrapper{width:6em;margin-top:0em}
+
+#product-thumbnail.style-select-wrapper select {
+    width: 6em;
+}

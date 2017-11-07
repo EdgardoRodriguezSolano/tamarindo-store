@@ -1,5 +1,8 @@
 {
   "name": "tamarindo-store",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "popper.js": "^1.12.6",
+    "tooltip.js": "^1.1.6"
+  }
 }

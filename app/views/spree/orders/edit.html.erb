@@ -76,21 +76,23 @@
                 <%= button_tag class: 'ch4_btn ch4_btnOrange ch4_btnDropShadowSummary ch4_btnSummaryCol', id: 'checkout-link', name: 'checkout' do %>
                 <%= Spree.t(:checkout) %>
                 <% end %>
+                    <p class="ch4_italic ch4_uppercase">OR</p>
+                   <div id="ch4_container">
 
+                    <%= link_to Spree.t(:continue_shopping), products_path, class: 'ch4_btn continue-button' %>  
+                </div>
             </div>
-
-
+   
       </div>
        <!-- FIN ch_summary -->
-
-          <% end %>   <!-- END for order_form -->
+         <% end %>   <!-- END for order_form -->
 
     <div id="empty-cart" data-hook>
       <%= form_tag empty_cart_path, method: :put do %>
         <p id="clear_cart_link" data-hook>
         <%= submit_tag Spree.t(:empty_cart), class: 'button gray' %>
         <%= Spree.t(:or) %>
-        <%= link_to Spree.t(:continue_shopping), products_path, class: 'continue button gray' %>
+
         </p>
       <% end %>
     </div>

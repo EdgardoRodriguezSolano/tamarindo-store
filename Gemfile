@@ -10,6 +10,8 @@ ruby '2.4.1'
 gem 'paperclip'
 gem 'fog-aws'
 
+# Required for bootstrap tooltips
+gem 'popper_js', '~> 1.12.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'

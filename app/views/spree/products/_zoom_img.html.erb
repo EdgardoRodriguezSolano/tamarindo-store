@@ -1,0 +1,13 @@
+              <% num = 0 %>
+              <% @product.images.each do |i| %>
+              <% if num ==0 %>
+              <div class = "item active">
+              <% else %>
+                    <div class = "item">
+                      <% end %>
+                      <%=image_tag i.attachment(:large), 
+                      size: "300x450", alt: num %>
+                    </div>
+                <% num = num + 1 %>
+                <% end %>
+ 

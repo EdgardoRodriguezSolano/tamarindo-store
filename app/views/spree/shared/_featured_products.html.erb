@@ -54,7 +54,7 @@
 
             <!--     IMAGEN DEL PRODUCTO   -->
             <div class="product-image">
-              <%= link_to image_tag(product.display_image.attachment(:small), itemprop: "image"), url, itemprop: 'url' %>
+              <%= link_to image_tag(product.display_image.attachment(:large), size: "200x300", itemprop: "image"), url, itemprop: 'url' %>
             </div>
 
             <!--     INFORMACIÓN DEL PRODUCTO   -->
@@ -64,7 +64,7 @@
             </h3>
 
             <p>
-              <%= link_to url, class: 'btn btn-primary' do%>
+              <%= link_to url, class: 'btn btn-success' do%>
               <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
                 <span class="price selling" itemprop="price" content="<%= product.price_for(current_pricing_options).to_d %>">
                   <%= display_price(product) %>
@@ -91,3 +91,4 @@
   </div>
 </div>
 </div>
+

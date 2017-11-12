@@ -87,11 +87,11 @@ es:
         password_confirmation: Password Confirmation
         spree_roles: Roles
       spree/line_item:
-        description: Item Description
-        name: Name
-        price: Price
-        quantity: Quantity
-        total: Total price
+        description: Descripción del producto
+        name: Nombre
+        price: Precio
+        quantity: Cantidad
+        total: Precio total
       spree/option_type:
         name: Name
         presentation: Presentation
@@ -1231,7 +1231,7 @@ es:
         no_user_specified: You need to login before applying this coupon code.
         not_first_order: This coupon code can only be applied to your first order.
     email: Email
-    empty: Empty
+    empty: Vacío
     empty_cart: Limpiar Carrito
     enable_mail_delivery: Enable Mail Delivery
     end: End
@@ -1432,7 +1432,7 @@ es:
     login_failed: Login authentication failed.
     login_name: Login
     logout: Logout
-    look_for_similar_items: Look for similar items
+    look_for_similar_items: Encontrar productos similares
     make_refund: Make refund
     make_sure_the_above_reimbursement_amount_is_correct: Make sure the above reimbursement amount is correct
     manage_promotion_categories: Manage Promotion Categories
@@ -1664,7 +1664,7 @@ es:
     preferred_reimbursement_type: Preferred Reimbursement Type
     presentation: Presentation
     previous: Previous
-    price: Price
+    price: Precio
     price_range: Price Range
     price_sack: Price Sack
     preference_source_none: '(custom)'

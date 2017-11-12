@@ -8,21 +8,36 @@
   </div>  
 
   <div class = "row">
-    <div class="col-md-3" data-hook="product_left_part">
-      <div data-hook="product_left_part_wrap">
+    <div class="col-md-6" data-hook="product_left_part">
 
-        <div id="product-images" data-hook="product_images">
-          <div id="main-image" data-hook>
-            <%= render partial: 'image' %>
-          </div>
-          <div id="thumbnails" data-hook>
-            <%= render partial: 'thumbnails' %>
-          </div>
-        </div>
+      <div id="carousel-custom" class="carousel slide" data-ride="carousel">
+            
+            <div class="carousel-outer">
+                <!-- Wrapper for carousel items -->
+                <div class="carousel-inner">
+                    <%= render partial: 'zoom_img' %>
+                </div>
 
+            </div>
 
+            <!-- Carousel indicators -->
+            <ol class="carousel-indicators mCustomScrollbar">
+              <%= render partial: 'thumbnails' %>
+            </ol>  
 
       </div>
+
+      <div data-hook="product_left_part_wrap">
+
+
+        <div class = "col-md-8">
+
+        </div>
+
+      </div>
+
+
+
     </div>
 
     <div class="col-md-3" data-hook="product_center_part">

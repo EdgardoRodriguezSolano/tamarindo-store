@@ -5,12 +5,13 @@
 
 <div class = "row ch4_cartItem">
 
+
     <!-- Imagen del producto listado -->
     <div class="ch4_cartItemImg" data-hook="cart_item_image">
       <% if variant.images.length == 0 %>
-      <%= link_to image_tag(variant.product.display_image.attachment(:large),height: 180, width: 150), variant.product %>
+      <%= link_to image_tag(variant.product.display_image.attachment(:large), size: "150x225", itemprop: "image"), variant.product %>
       <% else %>
-      <%= link_to image_tag(variant.images.first.attachment.url(:large), height: 180, width: 150), variant.product %>
+      <%= link_to image_tag(variant.images.first.attachment.url(:large), size: "150x225", itemprop: "image"), variant.product %>
       <% end %>
     </div>
 

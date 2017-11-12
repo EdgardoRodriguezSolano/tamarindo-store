@@ -21,8 +21,19 @@
       </div>
 
       <div class = "ch4_cartItemOptionsContainer">
-          <p class = "ch4_cartItemTitle">
+ 
+         <p class = "ch4_cartItemTitle">
             <%= link_to line_item.name, product_path(variant.product) %>
+          </p>
+          <div class="ch4_cartItemOptions">
+            <!--
+            <span class="ch4_cartItemOption"><span class="ch4_cartItemLabel">Size:</span>&nbsp;
+            S (8)</span>
+          -->
+          <div class="ch4_cartItemOption"><div class="ch4_cartItemLabel">Details:</div>
+
+         <p class = "ch4_cartItemTitle">
+
             <%= variant.options_text %> <br>
           </p>
           <% if line_item.insufficient_stock? %>
@@ -30,13 +41,6 @@
             <%= Spree.t(:out_of_stock) %>&nbsp;&nbsp;<br />
           </span>
           <% end %>
-
-          <div class="ch4_cartItemOptions">
-            <!--
-            <span class="ch4_cartItemOption"><span class="ch4_cartItemLabel">Size:</span>&nbsp;
-            S (8)</span>
-          -->
-          <div class="ch4_cartItemOption"><div class="ch4_cartItemLabel">Details:</div>
             <!-- price information and personalization display -->
             
             <!--
@@ -46,7 +50,7 @@
                <div id = "ch4_miniPDP " class="style-select-wrapper">
                   <%= item_form.select(:quantity, {}, {:class => 'ch4_miniPDPBuyingTools quantity-dropdown mediumSelect select-blk', :name => 'qty' }) do %>
                                          
-                      <%= options_for_select(['Qty','1','2','3','4','5','6','7','8','9','10'], selected: line_item.quantity) %>                      
+                      <%= options_for_select(['0','1','2','3','4','5','6','7','8','9','10'], selected: line_item.quantity) %>                      
                   <% end %>
                   
                   <div class="style-select style-select-blk"></div>
@@ -60,6 +64,18 @@
             </div>
 
           </div>
+      </div>
+
+
+
+      <div class="ch4_cartItemActions ch4_lgRes">
+
+        <%= button_tag class: 'ch4_btn ch4_btnSm ch4_editButton', id: 'update-button' do %>
+        <%= Spree.t(:update) %>
+        <% end %>
+
+      
+
       </div>
 
       <!--

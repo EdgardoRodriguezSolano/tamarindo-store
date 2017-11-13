@@ -1,9 +1,8 @@
 <%# no need for thumbnails unless there is more than one image %>
 <% if (@product.images + @product.variant_images).uniq.size > 1 %>
-  <ul id="product-thumbnails" class="thumbnails inline" data-hook>
     <% num = 0 %>
     <% @product.images.each do |i| %>
-      <li data-target="#carousel-custom" data-slide-to="<%= num %>">
+      <li data-target="#carousel-custom" data-slide-to="<%= num %>" class="thumbnails inline" data-hook>
          <%=image_tag i.attachment(:large), 
          size: "80x120", alt: num %>
       </li>
@@ -18,7 +17,6 @@
         </li>
       <% end %>
     <% end %>
-  </ul>
 <% end %>
 
 

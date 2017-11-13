@@ -30,7 +30,7 @@
       <div id="product_<%= product.id %>" class="thumbnail <%= cycle("alpha", "secondary", "", "omega secondary", name: "classes") %>" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
         <% cache(@taxon.present? ? [I18n.locale, current_pricing_options, @taxon, product] : [I18n.locale, current_pricing_options, product]) do %>
           <div class="product-image">
-            <%= link_to image_tag(product.display_image.attachment(:small), itemprop: "image"), url, itemprop: 'url' %>
+              <%= link_to image_tag(product.display_image.attachment(:large), size: "150x225", itemprop: "image"), url, itemprop: 'url' %>
           </div>
 		  <div class = "caption">
 			  <h3>

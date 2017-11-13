@@ -2,6 +2,7 @@
   "name": "tamarindo-store",
   "private": true,
   "dependencies": {
+    "magnify": "^2.1.0",
     "popper.js": "^1.12.6",
     "tooltip.js": "^1.1.6"
   }

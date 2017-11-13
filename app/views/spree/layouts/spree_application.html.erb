@@ -40,9 +40,25 @@
  
 
     <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <%= javascript_include_tag 'jquery.magnify.js' %>
 
+    <script>
+    $(document).ready(function() {
+      $('.zoom').magnify();
+    });
+    </script>
 
+<!--
+            magnifiedWidth: 500,
+          magnifiedHeight: 750
+-->
+    <script>
+      $(document).ready(function() {
+        $('.zoom').magnify({
 
+        });
+      });
+    </script>
 
     <script type="text/javascript">
       (function($) {          

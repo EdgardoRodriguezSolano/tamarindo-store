@@ -1,9 +1,7 @@
 <% if defined?(image) && image %>
   <%= image_tag image.attachment.url(:large), itemprop: "image" %>
 <% else %>
-  <%= image_tag @product.display_image.attachment(:large), size: "350x525", alt: "0" %>
+  <%= image_tag @product.display_image.attachment(:large), size: "350x525", alt: "0"%>
 <% end %>
 
 
-
-  

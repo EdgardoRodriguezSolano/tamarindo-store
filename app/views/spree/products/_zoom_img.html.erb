@@ -6,7 +6,7 @@
                     <div class = "item">
                       <% end %>
                       <%=image_tag i.attachment(:large), 
-                      size: "300x450", alt: num %>
+                      size: "250x375", alt: num, class: "zoom", "data-magnify-src":  i.attachment(:large) %>
                     </div>
                 <% num = num + 1 %>
                 <% end %>

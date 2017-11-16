@@ -1,0 +1,82 @@
+
+
+
+	<div class="container">
+      <div id="wrapper" class="row" data-hook>
+
+<!-- la linea de abajo arroja una lista de las categorías -->
+   <!--     <%= taxon_breadcrumbs(@taxon) %> -->
+
+ 
+
+        <div id="content" class="columns <%= !content_for?(:sidebar) ? "sixteen" : "twelve omega" %>" data-hook>
+          <%= flash_messages %>
+          <%= yield %>
+        </div>
+
+        <%= yield :templates %>
+     </div>
+ </div>
+ <!--    END MAIN CONTENT  -->
+
+
+  <!--     MAIN FOOTER    -->
+           <%= render partial: 'spree/shared/footer' %>
+
+  <!--   END MAIN FOOTER   -->
+ 
+
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <%= javascript_include_tag 'jquery.magnify.js' %>
+    <!-- Optional mobile plugin (uncomment the line below to enable): -->
+    <%= javascript_include_tag 'jquery.magnify-mobile.js' %>
+    
+
+
+    <script>
+    $(document).ready(function() {
+      $('.zoom').magnify();
+    });
+    </script>
+
+<!--
+            magnifiedWidth: 500,
+          magnifiedHeight: 750
+-->
+    <script>
+      $(document).ready(function() {
+        $('.zoom').magnify({
+
+        });
+      });
+    </script>
+
+    <script type="text/javascript">
+      (function($) {          
+        $(document).ready(function(){                    
+          $(window).scroll(function(){    
+
+          var mq = window.matchMedia( "(max-width: 800px)" );
+                  if (mq.matches) {
+                      // window width is at less than 800px
+                  }
+                  else {
+                      // window width is greater than 800px
+                              if ($(this).scrollTop() > 220) {
+                                $('#fixed-header').fadeIn(200);
+                              } else {
+                                $('#fixed-header').fadeOut(200);
+                              }
+                  }    
+
+
+          });
+
+
+        });
+      })(jQuery);
+    </script>
+
+
+
+    

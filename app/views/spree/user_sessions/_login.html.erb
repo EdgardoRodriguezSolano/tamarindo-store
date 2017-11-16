@@ -4,12 +4,12 @@
 
 <% @body_id = 'login' %>
 <div id="existing-customer">
-  <div class = "alert alert-info">
+  <div class = "headline">
   	<%= Spree.t(:login_as_existing) %>
   </div>
   <div data-hook="login">
     <%= render partial: 'spree/shared/login' %>
-    <%= Spree.t(:or) %>&nbsp;<%= link_to Spree.t(:create_a_new_account), spree.signup_path %> | <%= link_to Spree.t(:forgot_password), spree.recover_password_path %>
+    <%= link_to Spree.t(:forgot_password), spree.recover_password_path %>
   </div>
 </div>
 <div data-hook="login_extras"></div>

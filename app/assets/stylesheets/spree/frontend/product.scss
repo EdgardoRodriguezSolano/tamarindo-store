@@ -491,6 +491,7 @@ color: initial;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 p {
@@ -581,3 +582,144 @@ ul, ol {
     list-style-type: none;
 }
 
+
+/*** REGISTRATION PAGE ***/
+
+
+.co-btn_primary, 
+.co-btn_primary:hover{
+    padding: 14px 46px 14px 30px !important;
+    border: none;
+    background: #FA5400;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    border: 0px !important;
+}
+.co-btn_primary:hover{
+    background: #d24700 !important;
+}
+co-btn_primary span:after, 
+.co-btn_primary:hover span:after{
+    top: -2px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.co-btn_primary:hover span:after{
+    right: -31px!important;
+}
+
+/*BUTTONS*/
+button, button span,
+.button-primary,
+.bp-custom, .bp-custom:after, .bp-custom span,
+.button-ctn span,
+.button-atb, .button-atb span,
+.primary-label {
+    font-family: 'adiblack', Arial, Helvetica, Verdana, sans-serif;
+    font-size: 17px !important;
+    font-weight: normal;
+    text-transform: uppercase;
+    height: auto;
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.button-primary:hover,
+.primary-label:hover {
+    text-decoration: none;
+}
+.button-atb:focus, .button-loading:focus {height: 100%;}
+
+
+.co-btn_primary{
+    color: #fff;
+    position: relative;
+    font-size: 15px;
+    line-height: normal;
+}
+
+
+
+
+.co-btn_primary{
+    width: 100%;
+    position: relative;
+    display: block;
+    float: left;
+    font-weight: bold;
+    line-height: 20px;
+    background-color: #FA5400;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    font-family: 'adiHaus', Arial, Helvetica, Verdana, sans-serif;
+    padding: 12px 35px 8px 30px;
+    height: 42px;;
+     text-transform: uppercase;
+}
+
+.headline{
+    font-size: 1.75em;
+    margin-bottom: 1.2em;
+    /**font-family: Roboto Condensed, Helvetica, Arial, sans-serif;**/
+    font-family: 'Raleway', helvetica, sans;
+    line-height: 1;
+    margin: 0 0 20px;
+    text-transform: uppercase
+}
+
+.panel-heading{
+    font-size: 1.2em;
+    font-family: Roboto Condensed, Helvetica, Arial, sans-serif;
+    line-height: 1;
+    margin: 0 0 20px;
+    text-transform: uppercase;
+}
+
+.midline{
+    padding-right: 8em; /* Mueve a la izquierda y redimensiona los boxes de login*/
+    border-right: 2px solid #eee;
+}
+
+.createbenefits p
+{
+    margin: 0px;
+}
+
+.benefit-heading
+{
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: Roboto Condensed, Helvetica, Arial, sans-serif;
+    line-height: 1;
+    margin: 0 0 20px;
+    text-transform: uppercase;
+    
+}
+
+.benefit-list ul{
+    margin-bottom: 2em;
+    margin-left: -2.75em;
+}
+
+.benefit-list .fa
+{
+    color: #4ecb68;
+}
+
+.btn_create_account a{
+    color: #fff;
+    width: 75%;
+    height: 3em;
+    padding-top: 0.7em;
+    text-decoration: none;
+}

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170925204924) do
+ActiveRecord::Schema.define(version: 20171116032024) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -1184,7 +1184,6 @@ ActiveRecord::Schema.define(version: 20170925204924) do
   create_table "spree_zones", id: :serial, force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.boolean "default_tax", default: false
     t.integer "zone_members_count", default: 0
     t.datetime "created_at"
     t.datetime "updated_at"

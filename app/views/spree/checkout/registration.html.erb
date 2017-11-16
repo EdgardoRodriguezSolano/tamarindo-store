@@ -3,11 +3,14 @@
 <div class= "panel-heading"><%= Spree.t(:registration) %></div>
 <div class = "panel-body">
     <div id="registration" class="row" data-hook>
-      <div id="account" class="col-md-6">
+      <div id="account" class="col-md-6 midline">
         <div class= "col-md-8 col-md-offset-2">
         <%= render partial: 'spree/user_sessions/login' %>
       </div>
       </div>
+
+      <!--
+      ESTE CÓDIGO PERMITE EL PAGO COMO INVITADO / FUNCIONALIDAD EN STANDBY
       <% if Spree::Config[:allow_guest_checkout] %>
             <div id="guest_checkout" data-hook class="col-md-6">
             <div class= "col-md-8 col-md-offset-2">
@@ -29,6 +32,14 @@
                   </div>
             </div>
       <% end %>
+      -->
+      <div id="new_account" class="col-md-6">
+        <div class= "col-md-8 col-md-offset-2">
+        <%= render partial: 'spree/user_sessions/new_account' %>
+      </div>
+      </div>
+
+     
     </div>
   </div> <!-- div.panel-body-->
   </div> <!-- div.panel-default-->

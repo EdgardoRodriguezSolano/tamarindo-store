@@ -1,5 +1,7 @@
 module Spree::BaseHelper
   def layout_partial
+    @taxonomies = Spree::Taxonomy.includes(root: :children)
+    @featured_string = "Destacados"
     if devise_controller?
       'spree/base/devise'
     else

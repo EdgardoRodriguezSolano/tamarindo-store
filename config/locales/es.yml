@@ -83,8 +83,8 @@ es:
         state: State
       spree/legacy_user:
         email: Email
-        password: Password
-        password_confirmation: Password Confirmation
+        password: Contraseña
+        password_confirmation: Confirma tu contraseña
         spree_roles: Roles
       spree/line_item:
         description: Descripción del producto
@@ -381,8 +381,8 @@ es:
         active: Active
       spree/user:
         email: Email
-        password: Password
-        password_confirmation: Password Confirmation
+        password: Contraseña
+        password_confirmation: Confirma tu contraseña
         spree_roles: Roles
         lifetime_value: Total spent
       spree/variant:
@@ -719,7 +719,7 @@ es:
       send_instructions: You will receive an email with instructions about how to confirm your account in a few minutes.
     failure:
       inactive: Your account was not activated yet.
-      invalid: Invalid email or password.
+      invalid: Correo electrónico o contraseña inválidos.
       invalid_token: Invalid authentication token.
       locked: Your account is locked.
       timeout: Your session expired, please sign in again to continue.
@@ -1102,7 +1102,7 @@ es:
     confirm: Confirm
     confirm_delete: Confirm Deletion
     confirm_order: Confirm Order
-    confirm_password: Password Confirmation
+    confirm_password: Confirma tu contraseña
     continue: Continúa
     continue_shopping: Continue shopping
     cost_currency: Cost Currency
@@ -1133,7 +1133,7 @@ es:
     customer: Customer
     customer_return: Customer Return
     customer_returns: Customer Returns
-    create: Create
+    create: Crear cuenta
     create_a_new_account: Crea una nueva cuenta
     create_reimbursement: Create reimbursement
     create_one: Create One.
@@ -1365,7 +1365,7 @@ es:
     info_number_of_skus_not_shown:
       one: "and one other"
       other: "and %{count} others"
-    instructions_to_reset_password: Please enter your email on the form below
+    instructions_to_reset_password: Ingresa tu correo electrónico
     insufficient_stock: Insufficient stock available, only %{on_hand} remaining
     insufficient_stock_for_order: Insufficient stock for order
     insufficient_stock_lines_present: Some line items in this order have insufficient quantity.
@@ -1464,7 +1464,7 @@ es:
     new: New
     new_adjustment: New Adjustment
     new_adjustment_reason: New Adjustment Reason
-    new_customer: New Customer
+    new_customer: Tus datos
     new_customer_return: New Customer Return
     new_country: New Country
     new_image: New Image
@@ -1771,7 +1771,7 @@ es:
     rename: Rename
     reports: Reports
     resend: Resend
-    reset_password: Reset my password
+    reset_password: Restablecer la contraseña
     response_code: Response Code
     restock_inventory: Restock Inventory
     resume: Resume

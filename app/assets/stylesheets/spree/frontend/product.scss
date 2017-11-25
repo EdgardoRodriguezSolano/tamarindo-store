@@ -388,23 +388,7 @@ body.PL #subTotalAmount, body.PL #totalAmt, body.PL .currency {
     color: white;
 }
 
-select{
-    height: 2.25em;
-    padding-bottom: 0.45em;
-    padding-top: 0.45em;
-    vertical-align: baseline;
-    border: 0 !important;
-    outline: 0;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
-    padding-left: 0.75em;
-    background: 0 0;
-    z-index: 3;
-    width: 16em;
-}
 
-select:-moz-focusring{color:transparent;text-shadow:0 0 0 #000} 
 
 .style-select-wrapper select:focus,.select-blk{
     color: grey;
@@ -421,7 +405,7 @@ width: 5em;
 height: 2.5em;
 }
 
-select:hover+.style-select{background:#fff}
+
 
 .style-select:before{
 content:'';
@@ -443,9 +427,11 @@ border:1px solid #bfbcc9;
 .style-select-blk:after
 {border:solid #fff;border-width:0 2px 2px 0}
 
+
+select:hover+.style-select{background:#fff}
+
 select:hover+.style-select-blk{
     background: #7b7982;
-
 }
 
 .style-select,.style-select:before,select{
@@ -732,4 +718,50 @@ button, button span,
 #forgot-password
 {
     margin-top: 0.5em;
+}
+
+.style-select-wrapper select{
+    height: 2.25em;
+    padding-bottom: 0.45em;
+    padding-top: 0.45em;
+    vertical-align: baseline;
+    border: 0 !important;
+    outline: 0;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    padding-left: 0.75em;
+    background: 0 0;
+    z-index: 3;
+    width: 16em;
+}
+
+.style-select-wrapper select:-moz-focusring{color:transparent;text-shadow:0 0 0 #000} 
+
+select.style-select-wrapper.required.form-control{
+    width: 100%;
+}
+
+
+/*** BOOSTRAP OVERRIDE ***/
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus{
+    color: #fff;
+    background-color: #80b551
+    /**#337ab7 */
+}
+
+/* line 48, /usr/local/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets/bootstrap/_scaffolding.scss */
+a {
+    color: #b7b7cc;
+    text-decoration: none;
+}
+
+td.item-image
+{
+    text-align: center;
+}
+
+.subtotal_title
+{
+   font-weight: bold; 
 }

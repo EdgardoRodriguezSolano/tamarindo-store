@@ -963,7 +963,7 @@ es:
           pricing_hint: These values are populated from the product details page and can be overridden below
     administration: Administration
     agree_to_privacy_policy: Agree to Privacy Policy
-    agree_to_terms_of_service: Agree to Terms of Service
+    agree_to_terms_of_service: Acepto los términos de servicio
     all: All
     all_adjustments_finalized: All adjustments successfully finalized!
     all_adjustments_unfinalized: All adjustments successfully unfinalized!
@@ -1026,7 +1026,7 @@ es:
     back_to_stock_locations_list: Back to Stock Locations List
     back_to_stock_movements_list: Back to Stock Movements List
     back_to_stock_transfers_list: Back to Stock Transfers List
-    back_to_store: View store
+    back_to_store: Volver a la tienda
     back_to_tax_categories_list: Back To Tax Categories List
     back_to_tax_rates_list: Back To Tax Rates List
     back_to_taxonomies_list: Back To Taxonomies List
@@ -1099,12 +1099,12 @@ es:
     complete_order: Complete Order
     configuration: Configuration
     configurations: Configurations
-    confirm: Confirm
+    confirm: Confirmar
     confirm_delete: Confirm Deletion
     confirm_order: Confirm Order
     confirm_password: Confirma tu contraseña
     continue: Continúa
-    continue_shopping: Continue shopping
+    continue_shopping: Vuelve a la tienda
     cost_currency: Cost Currency
     cost_price: Cost Price
     could_not_connect_to_jirafe: Could not connect to Jirafe to sync data. This will be automatically retried later.
@@ -1178,7 +1178,7 @@ es:
     delete: Delete
     deleted_variants_present: Some line items in this order have products that are no longer available.
     deleted_successfully: Deleted successfully
-    delivery: Delivery
+    delivery: Entrega
     depth: Depth
     description: Description
     destination: Destination
@@ -1391,7 +1391,7 @@ es:
       shipped: Shipped
     is_not_available_to_shipment_address: is not available to shipment address
     iso_name: Iso Name
-    item: Item
+    item: Producto
     item_description: Item Description
     item_not_in_stock_transfer: Item is not part of the stock transfer
     item_total: Item Total
@@ -1455,7 +1455,7 @@ es:
     month: Month
     more: More
     move_stock_between_locations: Move Stock Between Locations
-    my_account: My Account
+    my_account: Mi cuenta
     my_orders: My Orders
     name: Name
     name_on_card: Name on card
@@ -1586,9 +1586,9 @@ es:
     order_mutex_admin_error: Order is being modified by someone else. Please try again.
     order_mutex_error: Something went wrong. Please try again.
     order_not_found: We couldn't find your order. Please try that action again.
-    order_number: Order %{number}
+    order_number: Orden %{number}
     order_please_refresh: Order is not ready to be completed. Please refresh totals.
-    order_processed_successfully: Your order has been processed successfully
+    order_processed_successfully: Tu orden ha sido procesada con éxito
     order_ready_for_confirm: Order ready for confirmation
     order_refresh_totals: Refresh Totals
     order_resumed: Order resumed
@@ -1653,7 +1653,7 @@ es:
     permalink: Permalink
     pending: Pending
     phone: Phone
-    place_order: Place Order
+    place_order: Confirma tu compra
     please_define_payment_methods: Please define some payment methods first.
     please_enter_reasonable_quantity: Please enter a reasonable quantity.
     populate_get_error: Something went wrong. Please try adding the item again.
@@ -1716,8 +1716,8 @@ es:
     property: Property Type
     provider: Provider
     payment_method_settings_warning: If you are changing the payment method type, you must save first before you can edit the payment method settings
-    qty: Qty
-    quantity: Quantity
+    qty: "#"
+    quantity: Cantidad
     quantity_returned: Quantity Returned
     quantity_shipped: Quantity Shipped
     rate: Rate
@@ -1880,8 +1880,8 @@ es:
     shipping_flat_rate_per_order: Flat rate
     shipping_flexible_rate: Flexible Rate per package item
     shipping_instructions: Shipping Instructions
-    shipping_method: Shipping Method
-    shipping_methods: Shipping Methods
+    shipping_method: Método de entrega
+    shipping_methods: Métodos de entrega
     shipping_price_sack: Price sack
     shipping_rate:
       display_price:
@@ -2012,7 +2012,7 @@ es:
         message: If you have received this email, then your email settings are correct.
         subject: Test Mail
     test_mode: Test Mode
-    thank_you_for_your_order: Thank you for your business.  Please print out a copy of this confirmation page for your records.
+    thank_you_for_your_order: Gracias por tu compra! Guarda o imprime una copia de esta página de confirmación para tus seguimientos.
     there_are_no_items_for_this_order: There are no items for this order. Please add an item to the order to continue.
     there_were_problems_with_the_following_fields: There were problems with the following fields
     this_order_has_already_received_a_refund: This order has already received a refund
@@ -2100,7 +2100,7 @@ es:
     year: Year
     you_have_no_orders_yet: You have no orders yet
     you_cannot_undo_action: You will not be able to undo this action
-    your_cart_is_empty: Your cart is empty
+    your_cart_is_empty: Tu carrito está aún vacío
     your_order_is_empty_add_product: Your order is empty, please search for and add a product above
     zip: Zip
     zipcode: Zip Code

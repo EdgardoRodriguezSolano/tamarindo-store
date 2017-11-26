@@ -13,12 +13,12 @@
     <p data-hook="links">
       <div class="row">
           <div class ="col-md-3 col-md-offset-6">
-          <%= link_to Spree.t(:back_to_store), spree.root_path, class: "continue btn btn-success btn-block" %>
+          <%= link_to Spree.t(:back_to_store), spree.root_path, class: "continue btn btn-success-checkout btn-block" %>
           </div>
           <% unless order_just_completed?(@order) %>
             <% if try_spree_current_user && respond_to?(:account_path) %>
               <div class ="col-md-3">
-              <%= link_to Spree.t(:my_account), spree.account_path, class: "continue btn btn-success btn-block" %>
+              <%= link_to Spree.t(:my_account), spree.account_path, class: "continue btn btn-success-checkout btn-block" %>
               </div>
             <% end %>
           <% end %>

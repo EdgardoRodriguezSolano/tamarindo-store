@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171116032024) do
+ActiveRecord::Schema.define(version: 20171125212820) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,37 @@ ActiveRecord::Schema.define(version: 20171116032024) do
     t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
     t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
+  end
+
+  create_table "solidus_paypal_braintree_configurations", id: :serial, force: :cascade do |t|
+    t.boolean "paypal", default: false, null: false
+    t.boolean "apple_pay", default: false, null: false
+    t.integer "store_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "credit_card", default: false, null: false
+    t.index ["store_id"], name: "index_solidus_paypal_braintree_configurations_on_store_id"
+  end
+
+  create_table "solidus_paypal_braintree_customers", id: :serial, force: :cascade do |t|
+    t.integer "user_id"
+    t.string "braintree_customer_id"
+    t.index ["braintree_customer_id"], name: "index_braintree_customers_on_braintree_customer_id", unique: true
+    t.index ["user_id"], name: "index_braintree_customers_on_user_id", unique: true
+  end
+
+  create_table "solidus_paypal_braintree_sources", id: :serial, force: :cascade do |t|
+    t.string "nonce"
+    t.string "token"
+    t.string "payment_type", null: false
+    t.integer "user_id"
+    t.integer "customer_id"
+    t.integer "payment_method_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["customer_id"], name: "index_solidus_paypal_braintree_sources_on_customer_id"
+    t.index ["payment_method_id"], name: "index_solidus_paypal_braintree_sources_on_payment_method_id"
+    t.index ["user_id"], name: "index_solidus_paypal_braintree_sources_on_user_id"
   end
 
   create_table "spree_addresses", id: :serial, force: :cascade do |t|
@@ -1189,6 +1220,7 @@ ActiveRecord::Schema.define(version: 20171116032024) do
     t.datetime "updated_at"
   end
 
+  add_foreign_key "solidus_paypal_braintree_sources", "spree_payment_methods", column: "payment_method_id"
   add_foreign_key "spree_adjustments", "spree_orders", column: "order_id", name: "fk_spree_adjustments_order_id", on_update: :restrict, on_delete: :restrict
   add_foreign_key "spree_product_promotion_rules", "spree_products", column: "product_id"
   add_foreign_key "spree_product_promotion_rules", "spree_promotion_rules", column: "promotion_rule_id"

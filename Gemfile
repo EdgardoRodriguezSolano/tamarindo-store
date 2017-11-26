@@ -44,6 +44,9 @@ gem 'solidus'
 gem 'solidus_auth_devise'
 gem 'font-awesome-rails'
 
+# Payment gateways
+gem 'solidus_paypal_braintree', github: 'solidusio/solidus_paypal_braintree', branch: :master
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

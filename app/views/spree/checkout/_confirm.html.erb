@@ -19,7 +19,7 @@
 
     <%= submit_tag Spree.t(:place_order),
       disabled: requires_acceptance,
-      class: "continue btn btn-success btn-block #{ 'disabled' if requires_acceptance }" %>
+      class: "continue btn btn-success-checkout btn-block #{ 'disabled' if requires_acceptance }" %>
   <% end %>
 
   <script>Spree.disableSaveOnClick();</script>

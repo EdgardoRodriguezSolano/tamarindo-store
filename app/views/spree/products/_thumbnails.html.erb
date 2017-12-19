@@ -3,8 +3,13 @@
     <% num = 0 %>
     <% @product.images.each do |i| %>
       <li data-target="#carousel-custom" data-slide-to="<%= num %>" class="thumbnails inline" data-hook>
-         <%=image_tag i.attachment(:large), 
-         size: "80x120", alt: num %>
+        <% if i.attachment_width>i.attachment_height %>
+           <%=image_tag i.attachment(:large), 
+           size: "120x80", alt: num %>
+        <% else %>
+           <%=image_tag i.attachment(:large), 
+           size: "80x120", alt: num %>
+        <% end %>
       </li>
     <% num = num + 1 %>
     <% end %>

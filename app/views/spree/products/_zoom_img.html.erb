@@ -5,8 +5,13 @@
               <% else %>
                     <div class = "item">
                       <% end %>
-                      <%=image_tag i.attachment(:large), 
-                      size: "250x375", alt: num, class: "zoom", "data-magnify-src":  i.attachment(:large) %>
+                      <% if i.attachment_width>i.attachment_height %>
+                        <%=image_tag i.attachment(:large), 
+                        size: "375x250", alt: num, class: "zoom", "data-magnify-src":  i.attachment(:large) %>
+                      <% else %>
+                        <%=image_tag i.attachment(:large), 
+                        size: "250x375", alt: num, class: "zoom", "data-magnify-src":  i.attachment(:large) %>
+                      <% end %>
                     </div>
                 <% num = num + 1 %>
                 <% end %>

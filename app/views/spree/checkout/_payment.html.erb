@@ -50,6 +50,7 @@
       <% @order.available_payment_methods.each do |method| %>
         <li id="payment_method_<%= method.id %>" class="<%= 'last' if method == @order.available_payment_methods.last %>" data-hook>
           <fieldset>
+            <%= binding.pry %>
             <%= render partial: "spree/checkout/payment/#{method.partial_name}", locals: { payment_method: method } %>
           </fieldset>
         </li>
@@ -60,6 +61,8 @@
   </div>
 </fieldset>
 
+
+
 <br class="space" />
 
 <div class = "row">
@@ -69,3 +72,9 @@
   <script>Spree.disableSaveOnClick();</script>
 </div>
 </div>
+
+
+
+<%= debug(@address) if Rails.env.development? %>
+
+

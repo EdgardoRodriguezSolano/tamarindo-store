@@ -1,0 +1,7 @@
+  <% if order_just_completed?(@order) %>
+    <strong><%= Spree.t(:thank_you_for_your_order) %></strong>
+  <% else %>
+    <strong><%= Orden no completada %></strong>
+  <% end %>
+
+  <%= debug(params) if Rails.env.development? %>

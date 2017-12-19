@@ -28,6 +28,26 @@
         <%= render :partial => 'summary', :locals => { :order => @order } %>
       </div>
     <% end %>
+ <form method="post" action="https://sandbox.gateway.payulatam.com/ppp-web-gateway/">
+  <input name="merchantId"    type="hidden"  value="508029"   >
+  <input name="accountId"     type="hidden"  value="512321" >
+  <input name="description"   type="hidden"  value="Compra Tamarindo"  > 
+  <input name="referenceCode" type="hidden"  value=<%= @order.number %> > <!-- @order.number-->
+  <input name="amount"        type="hidden"  value=<%= @order.total %>   > <!-- @order.total-->
+  <input name="tax"           type="hidden"  value=<%= @order.adjustment_total %>  > <!-- @order.adjustment_total-->
+  <input name="taxReturnBase" type="hidden"  value=<%= @order.item_total + @order.shipment_total %> > <!-- @order.item_total + @order.shipment_total-->
+  <input name="currency"      type="hidden"  value=<%= @order.currency %> > <!-- @order.currency-->
+  <input name="signature"     type="hidden"  value=<%= getSignature %>  > 
+  <input name="test"          type="hidden"  value="1">
+  <input name="buyerEmail"    type="hidden"  value=<%= @order.email %> > <!-- @order.email-->
+  <input name="responseUrl"    type="hidden"  value= "http://localhost:3000/checkout/confirm" > <!--pagina a redireccionar despues del procedimiento "http://localhost:3000/orders/<%= @order.number %>"-->
+  <input name="confirmationUrl"    type="hidden"  value=<%= checkout_path %> >
+  <input name="shippingAddress" type="hidden" value="calle 93 n 47 - 65" > 
+  <input name="shippingCity" type="hidden" value="Bogota" > 
+  <input name="shippingCountry" type="hidden" value="CO" > 
+  <input name="Submit"        type="submit"  value="Enviar" >
+</form>
+
   </div>
 </div>
 
@@ -39,3 +59,6 @@ Spree.current_order_token = "<%= @order.guest_token %>"
 <% if I18n.locale != :en %>
   <%= javascript_include_tag 'jquery.validate/localization/messages_' + I18n.locale.to_s.downcase.gsub('-', '') %>
 <% end %>
+
+
+<%= debug(@order) if Rails.env.development? %>

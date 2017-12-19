@@ -25,4 +25,11 @@ module Spree::CheckoutHelper
     end
     content_tag('ol', raw(items.join("\n")), class: 'progress-steps nav nav-pills nav-justified', id: "checkout-step-#{@order.state}")
   end
+
+  def getSignature
+     signature = Digest::MD5.hexdigest '4Vj8eK4rloUd272L48hsrarnUA~508029~'+@order.number.to_s+'~'+@order.total.to_s+'~'+@order.currency.to_s
+     return signature
+  end
+
+  
 end

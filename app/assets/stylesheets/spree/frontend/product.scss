@@ -568,6 +568,15 @@ ul, ol {
     list-style-type: none;
 }
 
+.nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    background-color: #eeeeee;
+    color: black;
+}
+
+.dropdown-menu > li > a {
+    font-weight: bold;
+}
 
 /*** REGISTRATION PAGE ***/
 

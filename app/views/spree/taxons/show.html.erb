@@ -8,10 +8,12 @@
 <% end %>
 
 
-
+<!--  Esta parte estará comentada para evitar mostrar los productos dos veces por página. Solo se mostrará taxon children -->
+<!--
 <div data-hook="taxon_products">
   <%= render partial: 'spree/shared/products', locals: { products: @products, taxon: @taxon } %>
 </div>
+-->
 
 <% unless params[:keywords].present? %>
   <div data-hook="taxon_children">

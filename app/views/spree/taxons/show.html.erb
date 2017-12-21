@@ -8,12 +8,14 @@
 <% end %>
 
 
-<!--  Esta parte estará comentada para evitar mostrar los productos dos veces por página. Solo se mostrará taxon children -->
-<!--
-<div data-hook="taxon_products">
-  <%= render partial: 'spree/shared/products', locals: { products: @products, taxon: @taxon } %>
-</div>
+<!--  Nota 1: Esta parte estará comentada para evitar mostrar los productos dos veces por página. Solo se mostrará taxon children 
+      Nota 2: Se agregó el condicional if @taxon.children.empty? para que funcionaran las vistas con las taxonomías más detalladas. Es decir, aquellas que no tienen children.
 -->
+
+<div data-hook="taxon_products">
+  <%= render partial: 'spree/shared/products', locals: { products: @products, taxon: @taxon } if @taxon.children.empty? %>
+</div>
+
 
 <% unless params[:keywords].present? %>
   <div data-hook="taxon_children">
